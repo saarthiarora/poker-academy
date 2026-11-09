@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #0b0e14;
+    --bg-card: #121721;
+    --border-dark: #1e2638;
+    --felt-green: #0a4d2e;
+    --felt-emerald: #065f46;
+    --gold: #f59e0b;
+    --gold-light: #fbbf24;
+  }
+
+  body {
+    background-color: #080b11;
+    color: #e2e8f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: none;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Poker animations */
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.8);
+  }
+}
+
+.glow-active-player {
+  animation: pulse-gold 2s infinite ease-in-out;
+}
+
+.felt-gradient {
+  background: radial-gradient(circle at center, #0f5132 0%, #083321 65%, #052115 100%);
+}
+
+.wood-rail {
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.7);
+  border: 12px solid #271a10;
+}
